@@ -87,7 +87,7 @@ jobs:
     permissions: {}
     timeout-minutes: 5
     if: |
-      github.repository == 'WordPress/wordpress-develop' || (
+      github.repository == 'himanshupathak95/wordpress-develop' || (
         github.event_name == 'pull_request' && (
           ! github.event.repository.private ||
           ! github.event.pull_request.draft ||
@@ -304,7 +304,7 @@ jobs:
     timeout-minutes: 10
     if: |
       ! cancelled() &&
-      github.repository == 'WordPress/wordpress-develop' &&
+      github.repository == 'himanshupathak95/wordpress-develop' &&
       needs.determine-themes.result == 'success' &&
       needs.check-for-empty-files.result == 'success' &&
       ( needs.test-build-scripts.result == 'success' || needs.test-build-scripts.result == 'skipped' )
